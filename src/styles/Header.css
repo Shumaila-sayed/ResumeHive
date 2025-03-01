@@ -1,0 +1,47 @@
+.header {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 1.8em ;
+    background-color: rgb(41, 134, 130);
+}
+
+.header-info {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+h1 {
+    color: azure;
+}
+
+img {
+    width: 1.8em;
+    height: 1.8em;
+}
+
+button {
+    background-color: rgba(31, 29, 29, 0.863);
+    color: azure;
+    border: none;
+    display: flex;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    align-items: center;
+    gap: 0.4em;
+    cursor: pointer;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+a {
+    color: rgb(192, 192, 219);
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: rgb(149, 149, 248);
+}

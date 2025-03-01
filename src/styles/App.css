@@ -1,5 +1,6 @@
 #root {
     display: grid;
-    border: 2px solid red;
-
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 4fr;
+    gap: 2em;
 }

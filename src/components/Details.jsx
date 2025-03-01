@@ -1,6 +1,14 @@
+import Personal from "./Personal"
+import Education from "./Education"
+
+
 function Details() {
-    return(
-        <h3>Hello im details section nice to meet you</h3>
+    return (
+        <>
+            <Personal />
+            <Education />
+        </>
+        
     )
 }
 

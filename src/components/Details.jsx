@@ -1,5 +1,7 @@
 import Personal from "./Personal"
 import Education from "./Education"
+import Experience from "./Experience"
+import '../styles/Details.css'
 
 
 function Details() {
@@ -7,6 +9,7 @@ function Details() {
         <div className="details">
             <Personal />
             <Education />
+            <Experience />
         </div>
         
     )

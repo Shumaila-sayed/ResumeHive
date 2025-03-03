@@ -10,11 +10,11 @@ function Personal() {
 		};
 
 	return (
-		<div>
+		<div className="card">
 			<h2>Personal Details</h2>
 			<form action=''>
 				<label>
-					Full Name:
+					Full Name
 					<input
                         type='text'
                         name='fullName'
@@ -24,7 +24,7 @@ function Personal() {
 				</label>
 
 				<label>
-					Email:
+					Email
 					<input
                         type='email'
                         name="email"
@@ -34,9 +34,9 @@ function Personal() {
 				</label>
 
 				<label>
-					Phone Number:
+					Phone Number
 					<input
-                        type='number'
+                        type='tel'
                         name="number"
 						value={input.number || ''}
 						onChange={handleChange}

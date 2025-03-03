@@ -1,31 +1,32 @@
 import { useState } from 'react';
 import schoolIcon from '../assets/school_32dp_E8EAED_FILL1_wght400_GRAD0_opsz40.svg'
 import downArrowIcon from '../assets/keyboard_arrow_down_31dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'
+import addIcon from '../assets/add_30dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg';
 
 function Education() {
-		const [input, setInputs] = useState({});
+	const [input, setInputs] = useState({});
 		
-		const handleChange = (event) => {
-				const name = event.target.name;
-				const value = event.target.value;
-				setInputs((values) => ({ ...values, [name]: value }));
+	const handleChange = (event) => {
+		const name = event.target.name;
+		const value = event.target.value;
+		setInputs((values) => ({ ...values, [name]: value }));
 	};
 	
     return (
-		<div>
+		<div className='card'>
 			<div className='edu-header'>
-				<img
+				
+				<h2><img
 					src={schoolIcon}
 					alt=''
-				/>
-				<h2>Education</h2>
+				/>Education</h2>
 				<img src={downArrowIcon} alt="" />
 			</div>
 				
 			<div className='form-container'>
 				<form action=''>
 					<label>
-						School:
+						School
 						<input
 							type='text'
 							name='school'
@@ -47,7 +48,7 @@ function Education() {
 					<label>
 						Start Date
 						<input
-							type='date'
+							type='text'
 							name='startDate'
 							value={input.startDate || ''}
 							onChange={handleChange}
@@ -55,9 +56,9 @@ function Education() {
 					</label>
 
 					<label>
-						End Date:
+						End Date
 						<input
-							type='date'
+							type='text'
 							name='endDate'
 							value={input.endDate || ''}
 							onChange={handleChange}
@@ -65,7 +66,7 @@ function Education() {
 					</label>
 				</form>
 			</div>
-			<button>+ Add Education</button>
+			  <button className='addBtn'><img src={addIcon} alt="" />Add Education</button>
 			</div>
 		);
 }

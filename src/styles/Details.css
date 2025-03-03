@@ -9,6 +9,7 @@
     background-color: rgb(41, 134, 130);
     padding: 1em 2em;
     border-radius: 0.6em;
+    width: 23vw;
 }
 
 input {
@@ -36,10 +37,14 @@ label {
 }
 
 h2 {
-    margin-bottom: 0.4em;
+    margin-bottom: 0.2em;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 0.2em;
+    font-size: 1.4em;
+}
+.edu-header img {
+    cursor: pointer;
 }
 
 .edu-header {
@@ -49,7 +54,6 @@ h2 {
 }
 
 .addBtn {
-    width: 50%;
-    margin:  0.5em auto 0 auto;
+    margin:  0.8em auto 0 auto;
     font-size: 0.9em;
 }

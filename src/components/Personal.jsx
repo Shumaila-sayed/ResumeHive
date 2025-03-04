@@ -1,13 +1,4 @@
-import { useState } from "react"
-
-function Personal() {
-    const [input, setInputs] = useState({});
-    
-    const handleChange = (event) => {
-			const name = event.target.name;
-			const value = event.target.value;
-			setInputs((values) => ({ ...values, [name]: value }));
-		};
+function Personal({input, handleChange}) {
 
 	return (
 		<div className='card'>
@@ -47,7 +38,7 @@ function Personal() {
 					Location
 					<input
 						type='text'
-						name='personal-location'
+						name='personalLocation'
 						value={input.personalLocation || ''}
 						onChange={handleChange}
 					/>

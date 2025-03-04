@@ -4,16 +4,9 @@ import downArrowIcon from '../assets/keyboard_arrow_down_31dp_E8EAED_FILL0_wght4
 import addIcon from '../assets/add_30dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg';
 import upArrowIcon from '../assets/keyboard_arrow_up_31dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'
 
-function Education() {
-	const [input, setInputs] = useState({});
+function Education({input, handleChange}) {
 	const [showForm, setShowForm] = useState(false);
 		
-	const handleChange = (event) => {
-		const name = event.target.name;
-		const value = event.target.value;
-		setInputs((values) => ({ ...values, [name]: value }));
-	};
-
 	const toggleForm = () => {
 	setShowForm(!showForm)
 	}
@@ -93,7 +86,7 @@ function Form({ input, handleChange }) {
 					Location
 					<input
 						type='text'
-						name='edu-location'
+						name='eduLocation'
 						value={input.eduLocation || ''}
 						onChange={handleChange}
 					/>

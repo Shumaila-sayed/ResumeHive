@@ -37,7 +37,7 @@ function Resume({input}) {
 
 				<div className='edu-info'>
 					<div className='edu-details'>
-						<p>{`${input.startDate} - ${input.endDate}`}</p>
+						<p>{input.startDate} - {input.endDate}</p>
 						<p>{input.eduLocation}</p>
 					</div>
 					<div className='edu-name'>
@@ -50,7 +50,7 @@ function Resume({input}) {
 				<div className='exp-box'>
 					<div className='exp-info'>
 						<div className='exp-details'>
-							<p>{`${input.workStartDate} - ${input.workEndDate}`}</p>
+							<p>{input.workStartDate} - {input.workEndDate}</p>
 							<p>{input.expLocation}</p>
 						</div>
 						<div className='exp-name'>

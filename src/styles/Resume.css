@@ -3,7 +3,7 @@
     width: 45em;
     background-color: aliceblue;
     margin: 0 6em 2em 4em ;
-  
+    box-shadow: rgba(197, 191, 191, 0.445) 0px 5px 15px;
 }
 
 .resume-header {

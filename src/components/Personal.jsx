@@ -10,14 +10,14 @@ function Personal() {
 		};
 
 	return (
-		<div className="card">
+		<div className='card'>
 			<h2>Personal Details</h2>
 			<form action=''>
 				<label>
 					Full Name
 					<input
-                        type='text'
-                        name='fullName'
+						type='text'
+						name='fullName'
 						value={input.fullName || ''}
 						onChange={handleChange}
 					/>
@@ -26,8 +26,8 @@ function Personal() {
 				<label>
 					Email
 					<input
-                        type='email'
-                        name="email"
+						type='email'
+						name='email'
 						value={input.email || ''}
 						onChange={handleChange}
 					/>
@@ -36,9 +36,19 @@ function Personal() {
 				<label>
 					Phone Number
 					<input
-                        type='tel'
-                        name="number"
+						type='tel'
+						name='number'
 						value={input.number || ''}
+						onChange={handleChange}
+					/>
+				</label>
+
+				<label>
+					Location
+					<input
+						type='text'
+						name='personal-location'
+						value={input.personalLocation || ''}
 						onChange={handleChange}
 					/>
 				</label>

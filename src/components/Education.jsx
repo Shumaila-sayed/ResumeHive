@@ -46,57 +46,67 @@ function Education() {
 }
 
 function Form({ input, handleChange }) {
-	return(
-	<div className='form-container'>
-		<form action=''>
-			<label>
-				School
-				<input
-					type='text'
-					name='school'
-					value={input.school || ''}
-					onChange={handleChange}
-				/>
-			</label>
+	return (
+		<div className='form-container'>
+			<form action=''>
+				<label>
+					School
+					<input
+						type='text'
+						name='school'
+						value={input.school || ''}
+						onChange={handleChange}
+					/>
+				</label>
 
-			<label>
-				Degree
-				<input
-					type='text'
-					name='degree'
-					value={input.degree || ''}
-					onChange={handleChange}
-				/>
-			</label>
+				<label>
+					Degree
+					<input
+						type='text'
+						name='degree'
+						value={input.degree || ''}
+						onChange={handleChange}
+					/>
+				</label>
 
-			<label>
-				Start Date
-				<input
-					type='text'
-					name='startDate'
-					value={input.startDate || ''}
-					onChange={handleChange}
-				/>
-			</label>
+				<label>
+					Start Date
+					<input
+						type='text'
+						name='startDate'
+						value={input.startDate || ''}
+						onChange={handleChange}
+					/>
+				</label>
 
-			<label>
-				End Date
-				<input
-					type='text'
-					name='endDate'
-					value={input.endDate || ''}
-					onChange={handleChange}
+				<label>
+					End Date
+					<input
+						type='text'
+						name='endDate'
+						value={input.endDate || ''}
+						onChange={handleChange}
+					/>
+				</label>
+
+				<label>
+					Location
+					<input
+						type='text'
+						name='edu-location'
+						value={input.eduLocation || ''}
+						onChange={handleChange}
+					/>
+				</label>
+			</form>
+			<button className='addBtn'>
+				<img
+					src={addIcon}
+					alt=''
 				/>
-			</label>
-		</form>
-		<button className='addBtn'>
-			<img
-				src={addIcon}
-				alt=''
-			/>
-			Add Education
-		</button>
+				Add Education
+			</button>
 		</div>
-	)
+	);
 }
 export default Education

@@ -1,0 +1,54 @@
+.resume-container {
+    height: 52em;
+    width: 45em;
+    background-color: aliceblue;
+    margin: 0 6em 2em 4em ;
+  
+}
+
+.resume-header {
+    background-color: rgb(41, 134, 130);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 1em;
+}
+
+.resume-header > h2 {
+    font-weight: bolder;
+    font-size: 2em;
+    color: rgb(250, 252, 252);
+}
+
+.contact-info {
+    display: flex;
+    gap: 1em;
+}
+
+.contact-info > p {
+    display: flex;
+    gap: 0.2em;
+}
+
+h3 {
+ background-color: rgba(41, 134, 129, 0.253);
+ color: rgb(18, 63, 61);
+ text-align: center;
+}
+
+.resume-body {
+    padding: 2em 4em;
+}
+
+.edu-info, .exp-info {
+    margin: 1.5em 0;
+    color: rgb(17, 16, 16);
+    display: flex;
+    gap: 1.5em;
+}
+
+.exp-respon {
+    color: rgb(17, 16, 16);
+    margin-left: 10em;
+    margin-top: -1.4em;
+}

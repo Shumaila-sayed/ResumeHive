@@ -79,6 +79,15 @@ function Form({input, handleChange}) {
 					/>
 				</label>
 				<label>
+					Location
+					<input
+						type='text'
+						name='exp-location'
+						value={input.expLocation || ''}
+						onChange={handleChange}
+					/>
+				</label>
+				<label>
 					Main Responsibilities
 					<textarea
 						name='responsibilities'

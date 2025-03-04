@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Header from './Header';
 import Details from './Details';
 import Resume from './Resume';
@@ -6,6 +6,8 @@ import '../styles/App.css';
 
 
 function App() {
+	const resumeRef = useRef();
+	
   const [input, setInputs] = useState({
 		fullName: 'John Doe',
 		email: 'johndoe@xyz.com',
@@ -19,7 +21,7 @@ function App() {
 		company: 'Umbrella Inc.',
 		position: 'UX & UI Designer',
 		workStartDate: '05/2022 ',
-		workEndDate: 'present',
+		workEndDate: 'Present',
 		expLocation: 'New York City, US',
 		responsibilities:
 		 'Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android',
@@ -34,14 +36,20 @@ function App() {
 
 	return (
 		<>
-			<Header />
+			<Header resumeRef={resumeRef} />
 			<div className='main'>
 				<Details
 					input={input}
 					handleChange={handleChange}
 				/>
-        {Object.keys(input).length > 0 ? <Resume input={input}/> : <p>Start filling in your details...</p>}
-				
+				{Object.keys(input).length > 0 ? (
+					<Resume
+						ref={resumeRef}
+						input={input}
+					/>
+				) : (
+					<p>Start filling in your details...</p>
+				)}
 			</div>
 		</>
 	);

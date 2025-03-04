@@ -2,10 +2,14 @@ import '../styles/Resume.css'
 import callIcon from '../assets/call_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg';
 import locationIcon from '../assets/location_on_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg';
 import mailIcon from '../assets/mail_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg';
+import { forwardRef } from 'react';
 
-function Resume({input}) {
+const Resume = forwardRef(({ input }, ref) => {
 	return (
-		<div className='resume-container'>
+		<div
+			className='resume-container'
+			ref={ref}
+		>
 			<div className='resume-header'>
 				<h2>{input.fullName}</h2>
 				<div className='contact-info'>
@@ -37,7 +41,9 @@ function Resume({input}) {
 
 				<div className='edu-info'>
 					<div className='edu-details'>
-						<p>{input.startDate} - {input.endDate}</p>
+						<p>
+							{input.startDate} - {input.endDate}
+						</p>
 						<p>{input.eduLocation}</p>
 					</div>
 					<div className='edu-name'>
@@ -50,7 +56,9 @@ function Resume({input}) {
 				<div className='exp-box'>
 					<div className='exp-info'>
 						<div className='exp-details'>
-							<p>{input.workStartDate} - {input.workEndDate}</p>
+							<p>
+								{input.workStartDate} - {input.workEndDate}
+							</p>
 							<p>{input.expLocation}</p>
 						</div>
 						<div className='exp-name'>
@@ -58,13 +66,11 @@ function Resume({input}) {
 							<p>{input.position}</p>
 						</div>
 					</div>
-					<p className='exp-respon'>
-						{input.responsibilities}
-					</p>
+					<p className='exp-respon'>{input.responsibilities}</p>
 				</div>
 			</div>
 		</div>
 	);
-}
+})
 
 export default Resume;

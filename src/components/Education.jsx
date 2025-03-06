@@ -4,7 +4,7 @@ import downArrowIcon from '../assets/keyboard_arrow_down_31dp_E8EAED_FILL0_wght4
 import addIcon from '../assets/add_30dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg';
 import upArrowIcon from '../assets/keyboard_arrow_up_31dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'
 
-function Education({input, handleChange}) {
+function Education({education, setEducation}) {
 	const [showForm, setShowForm] = useState(false);
 		
 	const toggleForm = () => {
@@ -30,76 +30,94 @@ function Education({input, handleChange}) {
 
 				{showForm && 
 					<Form
-						input={input}
-						handleChange={handleChange}
+				education={education}
+				setEducation={setEducation}
 					/>
 				}
 			</div>
 		);
 }
 
-function Form({ input, handleChange }) {
+function Form({ education, setEducation }) {
+	const handleChange = (index, event) => {
+		const { name, value } = event.target;
+		const updatedEducation = education.map((edu, i) =>
+			i === index ? { ...edu, [name]: value } : edu
+		);
+		setEducation(updatedEducation);
+	};
+
+	const addEducation = () => {
+		setEducation([
+			...education,
+			{ school: '', degree: '', startDate: '', endDate: '', eduLocation: '' },
+		]);
+	};
+
 	return (
 		<div className='form-container'>
-			<form action=''>
-				<label>
-					School
-					<input
-						type='text'
-						name='school'
-						value={input.school || ''}
-						onChange={handleChange}
-					/>
-				</label>
+			{education.map((edu, index) => (
+				<form key={index}>
+					<label>
+						School
+						<input
+							type='text'
+							name='school'
+							value={edu.school}
+							onChange={(e) => handleChange(index, e)}
+						/>
+					</label>
 
-				<label>
-					Degree
-					<input
-						type='text'
-						name='degree'
-						value={input.degree || ''}
-						onChange={handleChange}
-					/>
-				</label>
+					<label>
+						Degree
+						<input
+							type='text'
+							name='degree'
+							value={edu.degree}
+							onChange={(e) => handleChange(index, e)}
+						/>
+					</label>
 
-				<label>
-					Start Date
-					<input
-						type='text'
-						name='startDate'
-						value={input.startDate || ''}
-						onChange={handleChange}
-					/>
-				</label>
+					<label>
+						Start Date
+						<input
+							type='text'
+							name='startDate'
+							value={edu.startDate}
+							onChange={(e) => handleChange(index, e)}
+						/>
+					</label>
 
-				<label>
-					End Date
-					<input
-						type='text'
-						name='endDate'
-						value={input.endDate || ''}
-						onChange={handleChange}
-					/>
-				</label>
+					<label>
+						End Date
+						<input
+							type='text'
+							name='endDate'
+							value={edu.endDate}
+							onChange={(e) => handleChange(index, e)}
+						/>
+					</label>
 
-				<label>
-					Location
-					<input
-						type='text'
-						name='eduLocation'
-						value={input.eduLocation || ''}
-						onChange={handleChange}
-					/>
-				</label>
-			</form>
-			<button className='addBtn'>
+					<label>
+						Location
+						<input
+							type='text'
+							name='eduLocation'
+							value={edu.eduLocation}
+							onChange={(e) => handleChange(index, e)}
+						/>
+					</label>
+				</form>
+			))}
+			<button className='addBtn' onClick={addEducation}>
 				<img
 					src={addIcon}
-					alt=''
+					alt='Add'
 				/>
 				Add Education
 			</button>
 		</div>
+
 	);
 }
 export default Education

@@ -4,7 +4,7 @@ import Experience from "./Experience"
 import '../styles/Details.css'
 
 
-function Details({input, handleChange}) {
+function Details({input, education, setEducation,  experience, setExperience, handleChange,}) {
     return (
 			<div className='details'>
 				<Personal
@@ -12,12 +12,12 @@ function Details({input, handleChange}) {
 					handleChange={handleChange}
 				/>
 				<Education
-					input={input}
-					handleChange={handleChange}
+				  education={education}
+				  setEducation={setEducation}
 				/>
 				<Experience
-					input={input}
-					handleChange={handleChange}
+					experience={experience}
+					setExperience={setExperience}	
 				/>
 			</div>
 		);

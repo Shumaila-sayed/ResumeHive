@@ -4,7 +4,7 @@ import locationIcon from '../assets/location_on_24dp_E8EAED_FILL1_wght400_GRAD0_
 import mailIcon from '../assets/mail_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg';
 import { forwardRef } from 'react';
 
-const Resume = forwardRef(({ input }, ref) => {
+const Resume = forwardRef(({ input, education, experience }, ref) => {
 	return (
 		<div
 			className='resume-container'
@@ -39,35 +39,46 @@ const Resume = forwardRef(({ input }, ref) => {
 			<div className='resume-body'>
 				<h3>Education</h3>
 
-				<div className='edu-info'>
+				{education.map((edu, index) => {
+					return (
+					<div className='edu-info' key={index}>
 					<div className='edu-details'>
 						<p>
-							{input.startDate} - {input.endDate}
+							{edu.startDate} - {edu.endDate}
 						</p>
-						<p>{input.eduLocation}</p>
+						<p>{edu.eduLocation}</p>
 					</div>
 					<div className='edu-name'>
-						<p>{input.school}</p>
-						<p>{input.degree}</p>
+						<p>{edu.school}</p>
+						<p>{edu.degree}</p>
 					</div>
-				</div>
-
+					</div>
+					)
+				})
+				}
+				
 				<h3>Professional Experience</h3>
-				<div className='exp-box'>
-					<div className='exp-info'>
+
+				{experience.map((exp, index) => {
+					return (
+					 <div className='exp-box' key={index}>
+					   <div className='exp-info'>
 						<div className='exp-details'>
 							<p>
-								{input.workStartDate} - {input.workEndDate}
+								{exp.workStartDate} - {exp.workEndDate}
 							</p>
-							<p>{input.expLocation}</p>
+							<p>{exp.expLocation}</p>
 						</div>
 						<div className='exp-name'>
-							<p>{input.company}</p>
-							<p>{input.position}</p>
+							<p>{exp.company}</p>
+							<p>{exp.position}</p>
 						</div>
 					</div>
-					<p className='exp-respon'>{input.responsibilities}</p>
+					<p className='exp-respon'>{exp.responsibilities}</p>
 				</div>
+					)
+				})}
+				
 			</div>
 		</div>
 	);

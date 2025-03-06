@@ -1,7 +1,7 @@
 # ResumeHive
 
 ## 🚀 Overview
-Resume Builder is a React app that allows users to create a structured resume by filling in their general information, educational background, and work experience. Users can dynamically add multiple education and experience entries.
+ResumeHive is a React app that allows users to create a structured resume by filling in their general information, educational background, and work experience. Users can dynamically add multiple education and experience entries.
 
 ## ✨ Features
 - 📝 **General Information Section**: Add your name, email, location, and phone number.

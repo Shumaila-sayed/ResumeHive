@@ -38,8 +38,7 @@ function App() {
 	]);
   
   const handleChange = (event) => {
-		const name = event.target.name;
-		const value = event.target.value;
+	    const { name, value } = event.target;
 		setInputs((values) => ({ ...values, [name]: value }));
   };
 

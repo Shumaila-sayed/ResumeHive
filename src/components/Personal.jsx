@@ -3,7 +3,7 @@ function Personal({input, handleChange}) {
 	return (
 		<div className='card'>
 			<h2>Personal Details</h2>
-			<form action=''>
+			<form>
 				<label>
 					Full Name
 					<input

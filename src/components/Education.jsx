@@ -55,7 +55,7 @@ function Form({ education, setEducation }) {
 	};
 
 	return (
-		<div className='form-container'>
+		<div>
 			{education.map((edu, index) => (
 				<form key={index}>
 					<label>

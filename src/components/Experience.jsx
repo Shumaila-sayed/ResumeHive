@@ -59,10 +59,9 @@ function Form({ experience, setExperience }) {
 			},
 		]);
 	};
-	console.log(experience)
 
 	return (
-		<div className='form-container'>
+		<div>
 			{experience.map((exp, index) => (
 				<form key={index}>
 					<label>

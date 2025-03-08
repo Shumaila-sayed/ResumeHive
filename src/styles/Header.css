@@ -45,3 +45,10 @@ a {
 a:hover {
     color: rgb(149, 149, 248);
 }
+
+
+@media screen and (max-width: 480px) {
+    .header {
+        width: 200vw;
+    }
+}

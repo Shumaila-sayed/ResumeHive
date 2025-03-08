@@ -57,3 +57,9 @@ h2 {
     margin:  0.8em auto 0 auto;
     font-size: 0.9em;
 }
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100vw;
+    }
+}
